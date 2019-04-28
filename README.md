@@ -23,8 +23,9 @@ Scrape the latest Mars weather tweet from Mars Weather twitter account [here](ht
 
 ### Mars Facts
 
-Visit the Mars Facts webpage [here](https://space-facts.com/mars/) and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
-Use Pandas to convert the data to a HTML table string.
+Visit the Space Facts webpage, Mars facts page [here](https://space-facts.com/mars/) 
+Use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
+Use Pandas to convert the data to HTML table string.
 
 ### Mars Hemispheres
 
