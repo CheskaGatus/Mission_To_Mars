@@ -68,8 +68,8 @@ def scrape():
 	#print(soup_weather.prettify())
 
 	# Display mars weather details
-	mars_weather = soup_weather.find_all('p', class_ = 'TweetTextSize TweetTextSize--normal js-tweet-text tweet-text')[0].text
-
+	mars_weather = soup_weather.find_all('p', class_ = 'TweetTextSize TweetTextSize--normal js-tweet-text tweet-text')[0].text.split("pic")[0]
+	
 	# Dictionary entry for Mars weather from twitter
 	mars_info['mars_weather'] = mars_weather
 
