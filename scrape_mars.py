@@ -73,13 +73,6 @@ def scrape():
 	# Dictionary entry for Mars weather from twitter
 	mars_info['mars_weather'] = mars_weather
 
-
-
-	###### I need to remove pic.twitter.com/v0syJv5akT to the above result
-
-
-
-
 	### Mars Facts from Space Facts
 	# Visit the Space Facts webpage, mars facts page. 
 	# Use Pandas to scrape the table containing facts about Mars including Diameter, Mass, etc.
@@ -88,7 +81,6 @@ def scrape():
 	url_facts = 'https://space-facts.com/mars/'
 	
 	browser.visit(url_facts)
-
 
 	# Use Panda's `read_html` to parse the url
 	facts_df = pd.read_html(url_facts)[0]
@@ -138,7 +130,7 @@ def scrape():
 
 
 	mars_info['hemisphere_image_urls'] = hemisphere_image_urls
+	
+	browser.quit()
 
-    browser.quit()
-
-    return mars_info
+	return mars_info
