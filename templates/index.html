@@ -25,39 +25,45 @@
         <div class="container">
             <h3>Latest Mars News</h3>
             <h6 style="color: gray">{{ mars_info.news_title }}</h6>
-            <p>{{ mars_info.news__paragraph }}</p>
+            <p>{{ mars_info.news_paragraph }}</p>
+			<br>
+			<br>
         </div>
 
         <div class="container">
             <div class="row">
                 <!-- Left Image-->
-                <div class="col-lg-8 col-md-8 col-sm-12">
+				<br>
+				<br>
+                <div class="col-lg-6 col-md-6 col-sm-6">
                     <h3>Featured Mars Image</h3>
                     <img src="{{ mars_info.featured_image_url }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+					<br>
+					<br>
                 </div>
 
-                <!-- Weather Card -->
-                <div class="col-lg-4 col-md-4 col-sm-12">
-
+                <!-- Weather Card -->				
+                <div class="col-lg-6 col-md-6 col-sm-6">
+					<h3>Current Weather on Mars</h3>
                     <div class="card" style="width: 18rem;">
-                        <div class="card-body text-white bg-dark">
-                            <h6 class="card-title">Current Weather on Mars</h6>
-                            <p class="card-text">{{ mars_info.mars_weather }}</p>
+                        <div class="card-body text-white bg-dark">                            
+                            <p class="card-text">{{ mars_info.mars_weather }}</p>							
                         </div>
                     </div>
 
                     <!-- Table -->
-                    <br>
-                    <h3>Mars Facts</h3>
-                    <div style="max-width: 450px; max-height: 150px; font-size: 15px; margin-bottom: 65px;">
-                        {{ mars_info.mars_facts|safe}}
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+						<br>
+						<br>
+                        <h3 class="card-title">Mars Facts</h3>
+                        <p class="card-text">{{ mars_info.mars_facts|safe }}                   
                     </div>
-                </div> <!-- col4 -->
+                </div> <!-- col6 -->
             </div><!-- Row -->
         </div><!-- Container -->
 
         <!-- Cards -->
-        <h3 style="padding-top: 50px; margin-top: 100px; text-align: center;">Mars Hemispheres</h3>
+        <h3 style="margin-top: 100px; text-align: center;">Mars Hemispheres</h3>
         <div class="card-deck">
             <hr>
             <div class="col-md-12">
