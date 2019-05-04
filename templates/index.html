@@ -10,6 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/custom.css">
 </head>
 
 <body class="text-white" style="background-color:black">
@@ -35,29 +36,32 @@
                 <!-- Left Image-->
 				<br>
 				<br>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <h3>Featured Mars Image</h3>
                     <img src="{{ mars_info.featured_image_url }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+					<br>
 					<br>
 					<br>
                 </div>
 
                 <!-- Weather Card -->				
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-12 col-sm-12">
 					<h3>Current Weather on Mars</h3>
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <div class="card-body text-white bg-dark">                            
                             <p class="card-text">{{ mars_info.mars_weather }}</p>							
                         </div>
                     </div>
 
-                    <!-- Table -->
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-						<br>
-						<br>
-                        <h3 class="card-title">Mars Facts</h3>
-                        <p class="card-text">{{ mars_info.mars_facts|safe }}                   
-                    </div>
+                    <!-- Table -->                    
+					<br>
+					<br>
+					<h3>Mars Facts</h3>
+                    <div class="card center">
+                        <div class="card-body text-white bg-dark">                            
+                            <p class="card-text">{{ mars_info.mars_facts|safe }}</p>							
+                        </div>
+                    </div>										
                 </div> <!-- col6 -->
             </div><!-- Row -->
         </div><!-- Container -->
